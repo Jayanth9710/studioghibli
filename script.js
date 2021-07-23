@@ -1,3 +1,4 @@
+// Div for displaying the logo of Studio Ghibli//
 const query = document.createElement("div");
 query.className = "searchmovie";
 query.innerHTML = `
@@ -5,13 +6,13 @@ query.innerHTML = `
 
 `
 document.body.append(query);
-
-function loadmovies(movies){
+// Function to creating div and for Each to display run through the array to display all info.//
+function loadmovies(movies){        
   const movieList = document.createElement("div");
   movieList.className="movies-list";
   movies.forEach( (movies)=>{
     const moviescontainer = document.createElement("div");
-    moviescontainer.className="movies-container";
+    moviescontainer.className="movies-container";  // The container will have the DOM Elements like creating HTML tags using JS.//
     
     moviescontainer.innerHTML = `
     <div>
@@ -27,14 +28,14 @@ function loadmovies(movies){
 
 //Fetching data from API URL.//
 
-async function getmovies(movie){
+async function getmovies(movie){  // Async and Await method to fetch the data from API URL.//
   
   
  const data = await fetch("https://ghibliapi.herokuapp.com/films",{
     method:"GET"
   });
   const users = await data.json();
-  // Buttons for Pages//
+  // Buttons for Pages-->Pagination//
     const Pages = Math.ceil(users.length / 10);
   
   const pagination = document.getElementById('pagination');
@@ -68,12 +69,12 @@ async function getmovies(movie){
   console.log("No of users are ", users.length);
 
   
-  loadmovies(firstTenUsers);
+  loadmovies(firstTenUsers); // Calling the function loadmovies to display the first 10 objects of the array. //
 }
-getmovies();
+getmovies();  // Calling the function getmovies to display information from fetch.//
 
 const pagination = document.createElement("div");
-pagination.className = "pagesss";
+pagination.className = "pagesss"; 
 pagination.innerHTML = `
 <div class="paginations" id="pagination"></div>
 `
