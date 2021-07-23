@@ -38,7 +38,7 @@ body{
   letter-spacing:2px;
   color:white;
 }
-/* Styling texts when hovered over*/
+/* Styling texts when hovered over to change the color of the text.*/
 .movie-title:hover{
   color:yellow;
 }
@@ -47,6 +47,7 @@ body{
   letter-spacing:2px;
   color:white;
 }
+/* Styling texts when hovered over to change the color of the text.*/
 .director:hover{
   color:greenyellow;
 }
@@ -54,7 +55,7 @@ body{
   letter-spacing:2px;
   
 }
-
+/* Styling texts when hovered over to change the color of the text.*/
 .release-date:hover{
   color:red;
 }
