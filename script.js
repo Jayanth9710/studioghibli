@@ -5,7 +5,7 @@ query.innerHTML = `
 <img class="github-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png"></img>
 
 `
-document.body.append(query);
+document.body.append(query); // Appending the query element to body of HTML using DOM. //
 // Function to creating div and for Each to display run through the array to display all info.//
 function loadmovies(movies){        
   const movieList = document.createElement("div");
@@ -13,17 +13,17 @@ function loadmovies(movies){
   movies.forEach( (movies)=>{
     const moviescontainer = document.createElement("div");
     moviescontainer.className="movies-container";  // The container will have the DOM Elements like creating HTML tags using JS.//
-    
-    moviescontainer.innerHTML = `
+                                        // innerHTML lets us to create HTML elements similar to that of in HTML using DOM.
+    moviescontainer.innerHTML = ` 
     <div>
     <h4 class="movie-title">Movie: ${movies.title}<h4>
     <h4 class="director">Director: ${movies.director}<h4>
     <h4 class="release-date">Released on: ${movies.release_date}<h4>
     </div>
     `;
-    movieList.append(moviescontainer);
+    movieList.append(moviescontainer); // Appending moviescontainer div to the movielist .//
   });
-  document.body.append(movieList);
+  document.body.append(movieList);  // Appending movie list to the body of HTML. //
 }
 
 //Fetching data from API URL.//
@@ -32,9 +32,9 @@ async function getmovies(movie){  // Async and Await method to fetch the data fr
   
   
  const data = await fetch("https://ghibliapi.herokuapp.com/films",{
-    method:"GET"
+    method:"GET"  // GET Method to get (Display) the data from the REST API. //
   });
-  const users = await data.json();
+  const users = await data.json();  // Converting the received data into json. //
   // Buttons for Pages-->Pagination//
     const Pages = Math.ceil(users.length / 10);
   
@@ -53,13 +53,13 @@ async function getmovies(movie){  // Async and Await method to fetch the data fr
       const pageUsers = users.filter(
         (user, index) => index >= (i - 1) * 10 && index < i * 10
       );
-      document.querySelector(".movies-list").remove();
+      document.querySelector(".movies-list").remove(); // Using query selector the select elements using class name and perform  any functions or operations for ex. here removing or clearing. //
       
-     loadmovies(pageUsers);
+     loadmovies(pageUsers);  // Calling the loadmovies function. //
     };
     
-    pagination.append(page);
-  }
+    pagination.append(page);  
+  } 
 
   //Displaying the First ten data alone.//
 
