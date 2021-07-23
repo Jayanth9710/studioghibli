@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap');
+
+body{
+  display:grid;
+  justify-content:center;
+  
+}
+.github-logo{
+  width:300px;
+}
+.movies-container{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  gap: 15px;
+ background-image: linear-gradient(to right, #95dedd, #69cfe1, #3ebee8, #25abed, #4394eb, #4e86e9, #5f77e3, #7265da, #6b5edc, #6456de, #5c4fdf, #5447e1);
+  width:400px;
+  display:flex;
+  opacity:80%;
+}
+
+.movies-container:hover{
+  transform:scale(1.05);
+  opacity:1.5;
+}
+.paginations{
+  margin-bottom:10px;
+  display:flex;
+  justify-content:center;
+}
+.movie-title{
+  letter-spacing:2px;
+  color:white;
+}
+
+.movie-title:hover{
+  color:yellow;
+}
+
+.director{
+  letter-spacing:2px;
+  color:white;
+}
+.director:hover{
+  color:greenyellow;
+}
+.release-date{
+  letter-spacing:2px;
+  
+}
+
+.release-date:hover{
+  color:red;
+}
+
+.page-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 20px 5px 20px 5px;
+  background-image: linear-gradient(to top, #156abe, #1a70c1, #2176c4, #277cc7, #2e82ca);
+  font-family: 'Otomanopee One', sans-serif;
+  
+}
+
+.page-button:hover{
+  background-image: linear-gradient(to top, #6baae9, #9598e4, #be83ce, #db6da7, #e46077);
+}
+
+@media (min-width:1200px) and (max-width:1600px){
+  .movies-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:25px;
+  }
+}
+
+@media (min-width:900px) and (max-width:1200px){
+  .movies-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap:20px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 900px){
+.movies-list , .movies-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:10px;
+  width:300px;
+  justify-content:center;
+  
+}
+}
