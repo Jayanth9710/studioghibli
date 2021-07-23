@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap');  // Importing fonts from google fonts.//
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap');  /*Importing fonts from google fonts.*/
 
-body{
+body{   
   display:grid;
-  justify-content:center;
+  justify-content:center; /* Displaying according to grid system and justifying the contents of body  to center */
   
 }
+/* Styling Logo*/
 .github-logo{
   width:300px;
 }
+/* Styling the container div*/
 .movies-container{
   font-family: 'Fira Sans', sans-serif;
   font-size: 20px;
@@ -20,21 +22,23 @@ body{
   display:flex;
   opacity:80%;
 }
-
+/* Styling the conatiner when hovered over*/
 .movies-container:hover{
   transform:scale(1.05);
   opacity:1.5;
 }
+/* Styling pages button to display at center*/
 .paginations{
   margin-bottom:10px;
   display:flex;
   justify-content:center;
 }
+/* Using letter-spacing to give space between letters to better understand*/
 .movie-title{
   letter-spacing:2px;
   color:white;
 }
-
+/* Styling texts when hovered over*/
 .movie-title:hover{
   color:yellow;
 }
@@ -54,11 +58,11 @@ body{
 .release-date:hover{
   color:red;
 }
-
+/* Styling Button of pages*/
 .page-button{
   width: 40px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 5px; /* To get rounded corner */
   border: none;
   outline: none;
   margin: 20px 5px 20px 5px;
@@ -66,11 +70,11 @@ body{
   font-family: 'Otomanopee One', sans-serif;
   
 }
-
+/* Styling page button to change background color of the button when hovered over*/
 .page-button:hover{
   background-image: linear-gradient(to top, #6baae9, #9598e4, #be83ce, #db6da7, #e46077);
 }
-
+/* Styling according to device widths using Media Query*/
 @media (min-width:1200px) and (max-width:1600px){
   .movies-list{
     display: grid;
